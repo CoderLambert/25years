@@ -1,0 +1,24 @@
+{% block artical %}
+
+    <div class="container-fluid">
+        <div class ='row'>
+            <div class="col-sm-4 col-md-4">
+                <div class="panel panel-default">
+
+                    {% for i in Articals %}
+
+                        <div class="panel-heading">
+                            <h3> {{ i.headline }} </h3>
+                        </div>
+
+                        <div class="panel panel-body">
+                            <p> {{   i.content }} </p>
+                            <small> {{ i.pub_data }}</small>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
